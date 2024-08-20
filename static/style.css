@@ -1,0 +1,31 @@
+body{
+  background-color: coral;
+  font-family: "Arial";
+}
+
+table{
+  width:100%;
+  text-align: center;
+
+}
+
+input{
+  margin: 10px;
+}
+
+
+
+h1,h2,h3{
+  background-color: white;
+  text-align: center;
+}
+
+table,th,td{
+  border: 2px black solid;
+  border-collapse: collapse;
+  padding: 0, 20px, 0, 20px;
+  background-color: lightblue;
+}
+th{
+  background-color:teal;
+}

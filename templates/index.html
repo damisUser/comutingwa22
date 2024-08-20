@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Infomation Organiser</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form>
+      <label>Username: </label>
+      <input type="text" name="username">
+      <br>
+      <label>Password: </label>
+      <input type="password" name="password">
+      <br>
+      <input type="submit" name="login" value="Login">
+    </form>
+    <h3>{{ errormsg }}</h3>
+  </body>
+</html>

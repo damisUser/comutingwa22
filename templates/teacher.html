@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teacher</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    
+    <h2>Teacher: {{ name }}</h2>
+    <h3>Details: </h3>
+    <ul>
+      <li>CM: {{ cm }}</li>
+      <li>CG: {{ cg }}</li>
+      <li>CCA: {{ cca }}</li>
+      <li>Subject: {{ subject }}</li>
+    </ul>
+    <hr>
+    <form>
+      <label>Post Date: </label>
+      <input type="text" name = "post_date" placeholder="yyyy-mm-dd">
+      <br>
+      <label>To CM/CG/CCA: </label>
+      <input type="text" name = "to_group">
+      <br>
+      <label>About: </label>
+      <input type="text" name = "about">
+      <br>
+      <label>Priority: </label>
+      <input type="text" name = "priority" placeholder="HIGH/MEDIUM/LOW">
+      <br>
+      <label>Due Date: </label>
+      <input type="text" name = "due_date" placeholder="yyyy-mm-dd">
+      <br>
+      <input type="submit" name="submit" value="submit">
+    </form>
+    <hr>
+    <h2>Information</h2>
+    <h3>CM Table</h3>
+    <table>
+      <tr>
+        <th>Posted Date</th>
+        <th>To</th>
+        <th>About</th>
+        <th>Priority</th>
+        <th>Due Date</th>  
+      </tr>
+      {% for itm in cm_table %}
+        <tr>
+          <td>{{ itm[0] }}</td>
+          <td>{{ itm[1] }}</td>
+          <td>{{ itm[2] }}</td>
+          <td>{{ itm[3] }}</td>
+          <td>{{ itm[4] }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+    <h3>Subject Table</h3>
+    <table>
+      <tr>
+        <th>Posted Date</th>
+        <th>To</th>
+        <th>About</th>
+        <th>Priority</th>
+        <th>Due Date</th>  
+      </tr>
+      {% for itm in subject_table %}
+        <tr>
+          <td>{{ itm[0] }}</td>
+          <td>{{ itm[1] }}</td>
+          <td>{{ itm[2] }}</td>
+          <td>{{ itm[3] }}</td>
+          <td>{{ itm[4] }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+    <h3>CCA Table</h3>
+    <table>
+      <tr>
+        <th>Posted Date</th>
+        <th>To</th>
+        <th>About</th>
+        <th>Priority</th>
+        <th>Due Date</th>  
+      </tr>
+      {% for itm in cca_table %}
+        <tr>
+          <td>{{ itm[0] }}</td>
+          <td>{{ itm[1] }}</td>
+          <td>{{ itm[2] }}</td>
+          <td>{{ itm[3] }}</td>
+          <td>{{ itm[4] }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
